@@ -1,0 +1,23 @@
+[comment encoding = UTF-8 /]
+[module generate('http://pWebAvanzada/webPage')]
+
+
+[template public generateElement(aWebPage : WebPage)]
+[comment @main/]
+[file (aWebPage.nombre + '.html', false, 'UTF8')]
+<HTML>
+	<HEADER>
+		<TITLE> [aWebPage.header.title/]</TITLE>
+	</HEADER>
+		<BODY>
+			[for (p:Paragraph|aWebPage.paragraph)]
+				<p> [p.text/] </p>
+			[/for]
+			<FOOTER>
+				<div align='center'>[aWebPage.footer.info/] </div>
+			</FOOTER>
+		</BODY>
+</HTML>
+
+[/file]
+[/template]

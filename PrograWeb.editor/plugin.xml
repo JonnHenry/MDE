@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated pagWeb -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="webPage.presentation.WebPageModelWizardID"
+            name="%_UI_WebPageModelWizard_label"
+            class="webPage.presentation.WebPageModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/WebPageModelFile.gif">
+         <description>%_UI_WebPageModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated pagWeb -->
+      <editor
+            id="webPage.presentation.WebPageEditorID"
+            name="%_UI_WebPageEditor_label"
+            icon="icons/full/obj16/WebPageModelFile.gif"
+            extensions="webpage"
+            class="webPage.presentation.WebPageEditor"
+            contributorClass="webPage.presentation.WebPageActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

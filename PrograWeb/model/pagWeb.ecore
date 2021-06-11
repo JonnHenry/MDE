@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="webPage" nsURI="http://pWebAvanzada/webPage" nsPrefix="pWebAvanzada.webPage">
+  <eClassifiers xsi:type="ecore:EClass" name="WebPage">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="footer" eType="#//Footer"
+        containment="true" eOpposite="#//Footer/webpage"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="map" upperBound="-1" eType="#//Map"
+        containment="true" eOpposite="#//Map/webpage"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="paragraph" upperBound="-1"
+        eType="#//Paragraph" containment="true" eOpposite="#//Paragraph/webpage"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="header" eType="#//Header"
+        containment="true" eOpposite="#//Header/webpage"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Footer">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="info" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="webpage" lowerBound="1"
+        eType="#//WebPage" eOpposite="#//WebPage/footer"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Map">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lat" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="long" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="webpage" lowerBound="1"
+        eType="#//WebPage" eOpposite="#//WebPage/map"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Paragraph">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="webpage" lowerBound="1"
+        eType="#//WebPage" eOpposite="#//WebPage/paragraph"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Header">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="logo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="webpage" lowerBound="1"
+        eType="#//WebPage" eOpposite="#//WebPage/header"/>
+  </eClassifiers>
+</ecore:EPackage>

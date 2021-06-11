@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pWebAvanzada.webPage:WebPage
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:pWebAvanzada.webPage="http://pWebAvanzada/webPage"
+    xsi:schemaLocation="http://pWebAvanzada/webPage pagWeb.ecore"
+    nombre="Mi pagina web">
+  <footer info="Esto es el footer de mi pagina"/>
+  <map lat="3.0"
+      long="2.0"/>
+  <paragraph
+      text="Parrafo 1"/>
+  <paragraph
+      text="Parrafo 2"/>
+  <paragraph
+      text="Parrafo 3"/>
+  <header title="Cabecera de la pagina"/>
+</pWebAvanzada.webPage:WebPage>
